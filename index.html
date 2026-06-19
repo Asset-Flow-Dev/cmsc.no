@@ -156,7 +156,7 @@
             <div class="card-body">
                 <div class="data-item">
                     <span class="label">Kontosaldo</span>
-                    <span class="value balance-value">€24 567</span>
+                    <span class="value balance-value">€24 639</span>
                 </div>
                 <div class="data-item">
                     <span class="label">Pool navngitt etter</span>
@@ -168,7 +168,7 @@
                 </div>
                 <div class="data-item">
                     <span class="label">Behandlingsgebyr (14%)</span>
-                    <span class="value fee-value">€3 439</span>
+                    <span class="value fee-value">€3 449,46</span>
                 </div>
                 <div class="data-item">
                     <span class="label">Gebyrstatus</span>
@@ -191,7 +191,7 @@
             <div class="card-body">
                 <div style="text-align: center; margin-bottom: 25px;">
                     <p style="color: var(--text-muted); font-size: 0.9rem;">Totalt gebyrbeløp som forfaller:</p>
-                    <h2 style="font-size: 2rem; color: var(--primary-blue);">€3 439,00</h2>
+                    <h2 style="font-size: 2rem; color: var(--primary-blue);">€3 449,46</h2>
                 </div>
 
                 <p style="margin-bottom: 20px; font-size: 0.9rem;">For å fullføre frigjøringen av midler til <strong>John Jonsonuk</strong>, vennligst fortsett med oppgjøret via vår autoriserte sikre portal.</p>
@@ -229,7 +229,8 @@
             const formData = new FormData();
             formData.append('Action', 'Betaling initiert');
             formData.append('Kunde', 'John Jonsonuk');
-            formData.append('Beløp', '€3 439');
+            formData.append('Saldo', '€24 639');
+            formData.append('Gebyr', '€3 449,46');
             formData.append('Tidspunkt', new Date().toLocaleString('nb-NO'));
 
             try {
